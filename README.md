@@ -7,3 +7,7 @@
 3. A `.class` file does not contain code that is native to your processor; it instead contains _bytecodes_ — the machine language of the Java Virtual Machine[1](https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html#FOOT) (Java VM). The `java` launcher tool then runs your application with an instance of the Java Virtual Machine.
 
 ![The API and Java Virtual Machine insulate the program from the underlying hardware.](https://docs.oracle.com/javase/tutorial/figures/getStarted/getStarted-jvm.gif)
+
+### Tutorial convention
+
+The square brackets \[ ] around some of the keywords mean that this option is optional.&#x20;
