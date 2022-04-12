@@ -22,3 +22,4 @@
 * [Abstract Class](oop/abstract-class.md)
 * [Interface](oop/interface.md)
 * [Abstract vs Interfaces](oop/abstract-vs-interfaces.md)
+* [Record](oop/record.md)
