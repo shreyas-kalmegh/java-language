@@ -34,3 +34,11 @@
   * [Exception Wrapping](group-1/exception-handling/exception-wrapping.md)
   * [Loggin Exceptions](group-1/exception-handling/loggin-exceptions.md)
   * [Validation](group-1/exception-handling/validation.md)
+
+## Group 2
+
+* [Head First JAVA](group-2/head-first-java/README.md)
+  * [Creating and Destroying Objects](group-2/head-first-java/creating-and-destroying-objects.md)
+  * [Page 1](group-2/head-first-java/page-1.md)
+  * [Page 3](group-2/head-first-java/page-3.md)
+  * [Page 4](group-2/head-first-java/page-4.md)
