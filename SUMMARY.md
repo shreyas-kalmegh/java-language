@@ -42,3 +42,7 @@
   * [Classes and Interfaces](group-2/head-first-java/classes-and-interfaces.md)
   * [Page 3](group-2/head-first-java/page-3.md)
   * [Page 4](group-2/head-first-java/page-4.md)
+
+## Advance
+
+* [Generics](advance/generics.md)

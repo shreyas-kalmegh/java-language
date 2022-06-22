@@ -10,7 +10,7 @@ If you also need to provide a base class or default implementation of the interf
 
 First the interface:
 
-```java
+```
 public interface URLProcessor {
 
     public void process(URL url) throws IOException;
@@ -19,7 +19,7 @@ public interface URLProcessor {
 
 Second, the abstract base class:
 
-```java
+```
 public abstract class URLProcessorBase implements URLProcessor {
 
     public void process(URL url) throws IOException {
@@ -41,7 +41,7 @@ public abstract class URLProcessorBase implements URLProcessor {
 
 Third, the subclass of the abstract base class:
 
-```java
+```
 public class URLProcessorImpl extends URLProcessorBase {
 
     @Override
@@ -57,7 +57,7 @@ public class URLProcessorImpl extends URLProcessorBase {
 
 Fourth, how to use the interface `URLProcessor` as variable type, even though it is the subclass `UrlProcessorImpl` that is instantiated.
 
-```java
+```
 URLProcessor urlProcessor = new URLProcessorImpl();
 
 urlProcessor.process(new URL("http://jenkov.com"));
