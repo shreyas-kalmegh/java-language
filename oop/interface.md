@@ -4,7 +4,7 @@ A _Java_ _interface_ is a bit like a [Java class](https://jenkov.com/tutorials/j
 
 
 
-```
+```java
 public interface MyInterface {
 
     public String hello = "Hello";
@@ -21,7 +21,7 @@ public class MyInterfaceImpl implements MyInterface {
 
 ### Interface Intances
 
-```
+```java
 MyInterface myInterface = new MyInterfaceImpl();
 
 myInterface.sayHello();
@@ -31,7 +31,7 @@ myInterface.sayHello();
 
 
 
-```
+```java
 import com.jenkov.package1.MyInterface;
 import com.jenkov.package2.MyOtherInterface;
 
@@ -52,7 +52,7 @@ All variables in an interface are implicitly `public`, `static` and `final`, eve
 
 
 
-```
+```java
 public interface MyInterface {
 
     int FALSE = 0;
@@ -88,7 +88,7 @@ A better solution would be to create some interfaces with the storage and serial
 
 
 
-```
+```java
 public interface Storable {
     public void store();
 }
@@ -100,9 +100,7 @@ public interface Serializable {
 
 When each class implements these two interfaces and their methods, you can access the methods of these interfaces by casting the objects to instances of the interface types
 
-
-
-```
+```java
 Car car = new Car();
 
 Storable storable = (Storable) car;
@@ -113,11 +111,24 @@ serializable.serializeToXML (new FileWriter("car.xml"));
 serializable.serializeToJSON(new FileWriter("car.json"));
 ```
 
+#### Why upcast to interfaces
+
+```java
+// upcasting to interface
+List<String> strings = new ArrayList<String>();
+
+// as is
+ArrayList<String> strings = new ArrayList<String>();
+
+```
+
+upcasting to List helps us restrict strings object to use only the behaviour supported by List interfaces and we can swap out ArrayList to any other class which implements List interface. At runtime strings is still treated as ArrayList but at compile time it is treated as List
+
 ### Generic Interfaces
 
 A generic Java interface is an interface which can be typed - meaning it can be specialized to work with a specific type
 
-```
+```java
 // generic interface
 public interface MyProducer() {
     public Object produce();
@@ -138,7 +149,7 @@ Car car = (Car) carProducer.produce(); // cast the generic type to Car
 
 
 
-```
+```java
 public interface MyProducer <T>{    
     public T produce();    
 }
