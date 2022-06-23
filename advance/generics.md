@@ -19,6 +19,18 @@ List<Integer> list = new LinkedList<>();
 
 By adding the diamond operator <> containing the type, we narrow the specialization of this list to only _Integer_ type
 
+### Generic Class
+
+Adding \<T> to class declaration tells it that it will deal with a type T
+
+```java
+public class Printer <T>{
+    public static void shout(T t){
+    System.out.println(t);
+    }
+}
+```
+
 ### **Generic Methods**
 
 We write generic methods with a single method declaration, and we can call them with arguments of different types. The compiler will ensure the correctness of whichever type we use.
@@ -56,7 +68,7 @@ public static <T, G> List<G> fromArrayToList(T[] a, Function<T, G> mapperFunctio
 
 ### **Bounded Generics**
 
-we can specify that a method accepts a type and all its sub-classes (upper bound) or a type and all its superclasses (lower bound).
+we can specify that a class/method accepts a type and all its sub-classes (upper bound) or a type and all its superclasses (lower bound).
 
 
 
@@ -68,6 +80,10 @@ public <T extends Number> List<T> fromArrayToList(T[] a) {
 }
 ```
 
+{% hint style="info" %}
+when used with a class. The methods associated with the bounded classes will be availble in the enclosing class
+{% endhint %}
+
 ### **Multiple Bounds**
 
 A type can also have multiple upper bounds:
@@ -77,12 +93,12 @@ A type can also have multiple upper bounds:
 ```
 
 {% hint style="warning" %}
-If one of the types that are extended by _T_ is a class (e.g. _Number_), we have to put it first in the list of bounds. Otherwise, it will cause a compile-time error.
+If one of the types that are extended by _T_ is a class (e.g. _Number_), we have to put it first in the list of bounds. Otherwise, it will cause a compile-time error(no multiple inheritance).
 {% endhint %}
 
 ### **Using Wildcards With Generics**
 
-Wildcards are represented by the question mark _?_ in Java, and we use them to refer to an unknown type.
+Wildcards are represented by the question mark _?_ in Java, and we use them to refer to an unknown type. Use them when we ues generic types in parameters. In the below example elements of List are of unknown type. We don't use \<T> here as List is already a generic type
 
 
 

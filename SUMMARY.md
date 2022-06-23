@@ -45,4 +45,8 @@
 
 ## Advance
 
+* [Type System](advance/type-system.md)
 * [Generics](advance/generics.md)
+* [Collections](advance/collections/README.md)
+  * [Java Iterator](advance/collections/java-iterator.md)
+  * [Java Iterable](advance/collections/java-iterable.md)
