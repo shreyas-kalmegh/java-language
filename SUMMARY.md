@@ -50,3 +50,6 @@
 * [Collections](advance/collections/README.md)
   * [Java Iterator](advance/collections/java-iterator.md)
   * [Java Iterable](advance/collections/java-iterable.md)
+  * [Java Collection](advance/collections/java-collection.md)
+  * [Collections Utility Methods](advance/collections/collections-utility-methods.md)
+  * [List](advance/collections/list.md)
