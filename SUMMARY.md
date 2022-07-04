@@ -62,3 +62,4 @@
   * [Java Properties](advance/collections/java-properties.md)
   * [Java Queue](advance/collections/java-queue.md)
   * [Deque](advance/collections/deque.md)
+  * [Java Stack](advance/collections/java-stack.md)

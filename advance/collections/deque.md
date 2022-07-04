@@ -31,3 +31,61 @@ As mentioned in the beginning of this Java `Deque` tutorial, you can add element
 * offerFirst(): The `offerFirst()` method adds an element to the beginning (head) of the Deque. If adding the element succeeds the `offerFirst()` method returns `true`. If the adding the element fails - e.g. if the Deque is full, the `offerFirst()` method returns `false`. This is different from the `addFirst()` method which will throw an exception is adding an element to the beginning of the Deque fails
 * offerLast(): The `offerLast()` method adds an element to the end (tail) of the Deque, just like `offer()`.
 
+
+
+### Peek at Element in Deque
+
+You can peek at the first and last elements of a Java `Deque`. Peeking at an element means obtaining a reference to the element without removing the element from the `Deque`. You can peek at the first and last element of a Java `Deque` using these methods:
+
+* peek()
+* peekFirst()
+* peekLast()
+* getFirst()
+* getLast()
+
+
+
+### Remove Element From Deque
+
+To remove elements from a Java `Deque`, you can use one of the following methods:
+
+* remove()
+* removeFirst()
+* removeLast()
+* poll()
+* pollFirst()
+* pollLast()
+
+
+
+#### terate Elements via Iterator
+
+The first way of iterating the elements of a `Deque` is to obtain an [Iterator](https://jenkov.com/tutorials/java-collections/iterator.html) from the `Deque` and iterate the elements via that. Here is an example of iterating the elements of a Java `Deque` via an `Iterator`:
+
+```java
+Deque<String> deque = new LinkedList<>();
+
+deque.add("element 0");
+deque.add("element 1");
+deque.add("element 2");
+
+Iterator<String> iterator = deque.iterator();
+while(iterator.hasNext(){
+  String element = iterator.next();
+}
+```
+
+#### Iterate Elements via For-Each Loop
+
+The second way to iterate the elements of a `Deque` is to use the for-each loop in Java. Here is an example of iterating the elements of a Java `Deque` via the for-each loop:
+
+```java
+Deque<String> deque = new LinkedList<>();
+
+deque.add("element 0");
+deque.add("element 1");
+deque.add("element 2");
+
+for(String element : deque) {
+    System.out.println(element);
+```
