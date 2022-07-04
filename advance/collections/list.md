@@ -18,3 +18,70 @@ Since `List` is an interface you need to instantiate a concrete implementation o
 * java.util.LinkedList
 * java.util.Vector
 * java.util.Stack
+
+### Convert List to Set, Array, List
+
+
+
+```java
+List<String> list = new ArrayList<>();
+
+list.add("element 1");
+list.add("element 2");
+list.add("element 3");
+list.add("element 3");
+
+// To Set
+Set<String> set = new HashSet<>();
+set.addAll(list);
+
+// To Array
+String[] objects1 = list.toArray(new String[0]);
+```
+
+
+
+### Convert Array to List
+
+```java
+String[] values = new String[]{ "one", "two", "three" };
+
+List<String> list = (List<String>) Arrays.asList(values);
+```
+
+### Sort List Using Comparator
+
+If the objects in the Java `List` do not implement the `Comparable` interface, or if you want to sort the objects in another order than their `compare()` implementation, then you need to use a `Comparator` implementation (`java.util.Comparator`). Here is an example of sorting a list of `Car` objects using a `Comparator`.
+
+
+
+```java
+List<Car> list = new ArrayList<>();
+
+list.add(new Car("Volvo V40" , "XYZ 201845", 5));
+list.add(new Car("Citroen C1", "ABC 164521", 4));
+list.add(new Car("Dodge Ram" , "KLM 845990", 2));
+
+Comparator<Car> carBrandComparator = new Comparator<Car>() {
+    @Override
+    public int compare(Car car1, Car car2) {
+        return car1.brand.compareTo(car2.brand);
+    }
+};
+
+// Using Lambda
+Comparator<Car> carBrandComparatorLambda      =
+    (car1, car2) -> car1.brand.compareTo(car2.brand);
+
+Collections.sort(list, carBrandComparator);
+```
+
+### Iterate List Using Java Stream API
+
+
+
+```java
+Stream<String> stream = stringList.stream();
+stream
+    .forEach( element -> { System.out.println(element); })j
+```
