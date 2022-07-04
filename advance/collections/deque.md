@@ -28,6 +28,6 @@ As mentioned in the beginning of this Java `Deque` tutorial, you can add element
 * addLast(): The `addLast()` method also adds an element to the end (tail) of a Java `Deque`.
 * addFirst(): To add an element at the beginning (head) instead of the end of a Java `Deque` you call the `addFirst()` method instead.If the element cannot be added to the beginning of the Deque, the `addFirst()` method will throw an exception. This is different from the `offerFirst()` method which will return `false` if an element cannot be inserted in the beginning of the Deque.
 * offer(): The `offer()` method adds an element to the end (tail) of the Deque. If adding the element succeeds the `offer()` method returns `true`. If the adding the element fails - e.g. if the Deque is full, the `offer()` method returns `false`. This is different from the `add()` method which will throw an exception is adding an element to the end of the Deque fails.
-* offerFirst()
+* offerFirst(): The `offerFirst()` method adds an element to the beginning (head) of the Deque. If adding the element succeeds the `offerFirst()` method returns `true`. If the adding the element fails - e.g. if the Deque is full, the `offerFirst()` method returns `false`. This is different from the `addFirst()` method which will throw an exception is adding an element to the beginning of the Deque fails
 * offerLast(): The `offerLast()` method adds an element to the end (tail) of the Deque, just like `offer()`.
 
